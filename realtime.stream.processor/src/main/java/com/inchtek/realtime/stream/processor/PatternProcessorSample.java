@@ -20,14 +20,13 @@ import org.wso2.siddhi.core.event.Event;
 import org.wso2.siddhi.core.stream.input.InputHandler;
 import org.wso2.siddhi.core.stream.output.StreamCallback;
 import org.wso2.siddhi.core.util.EventPrinter;
-import org.wso2.siddhi.query.compiler.exception.SiddhiPraserException;
 
 /**
  * Sample demonstrating a pattern processing
  */
 public class PatternProcessorSample {
 
-    public static void main(String[] args) throws SiddhiPraserException, InterruptedException {
+    public static void main(String[] args) throws  InterruptedException {
 
         // Create Siddhi Manager
         SiddhiManager siddhiManager = new SiddhiManager();
@@ -41,6 +40,7 @@ public class PatternProcessorSample {
                                "-> e3=CSEStream [price > e2.price  and symbol == e1.symbol] " +
                                "insert into StockQuote e1.symbol as symbol, e2.price as price1, e3.price as price2;");
 
+        
         siddhiManager.addCallback("StockQuote", new StreamCallback() {
 
             @Override

@@ -17,10 +17,9 @@ package com.inchtek.realtime.stream.processor;
 
 import org.wso2.siddhi.core.SiddhiManager;
 import org.wso2.siddhi.core.event.Event;
-import org.wso2.siddhi.core.query.output.QueryCallback;
+import org.wso2.siddhi.core.query.output.callback.QueryCallback;
 import org.wso2.siddhi.core.stream.input.InputHandler;
 import org.wso2.siddhi.core.util.EventPrinter;
-import org.wso2.siddhi.query.compiler.exception.SiddhiPraserException;
 
 /**
  * Sample demonstrating a the use of time window and aggregation functions
@@ -28,7 +27,7 @@ import org.wso2.siddhi.query.compiler.exception.SiddhiPraserException;
 public class TimeWindowSample {
 
     public static void main(String[] args)
-            throws InterruptedException, SiddhiPraserException {
+            throws InterruptedException {
 
         // Create Siddhi Manager
         SiddhiManager siddhiManager = new SiddhiManager();
